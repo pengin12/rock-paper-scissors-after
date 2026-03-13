@@ -17,3 +17,13 @@ function getHumanChoice() {
 function getComputerChoice() {
   return getRandomInt(3);
 }
+
+function numberToChoice(choice) {
+  if (choice === 0) {
+    return "Rock";
+  } else if (choice === 1) {
+    return "Paper";
+  } else {
+    return "Scissors";
+  }
+}
