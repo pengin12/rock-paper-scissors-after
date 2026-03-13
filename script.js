@@ -52,5 +52,3 @@ function playRound(humanChoice, computerChoice) {
     return 0;
   }
 }
-
-console.log(playRound(getHumanChoice(), getComputerChoice()));
