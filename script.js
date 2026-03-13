@@ -27,3 +27,25 @@ function numberToChoice(choice) {
     return "Scissors";
   }
 }
+
+function playRound(humanChoice, computerChoice) {
+  const humanChoiceText = numberToChoice(humanChoice);
+  const computerChoiceText = numberToChoice(computerChoice);
+
+  const humanWin = `You win! ${humanChoiceText} beats ${computerChoiceText}`;
+  const computerWin = `You lose! ${computerChoiceText} beats ${humanChoiceText}`;
+
+  if (humanChoice === computerChoice) {
+    console.log("Draw!");
+    return -1;
+  } else if (humanChoice === 0 && computerChoice === 2) {
+    console.log(humanWin);
+    return 1;
+  } else if (humanChoice > computerChoice) {
+    console.log(humanWin);
+    return 1;
+  } else {
+    console.log(computerWin);
+    return 0;
+  }
+}
