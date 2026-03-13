@@ -41,6 +41,9 @@ function playRound(humanChoice, computerChoice) {
   } else if (humanChoice === 0 && computerChoice === 2) {
     console.log(humanWin);
     return 1;
+  } else if (humanChoice === 2 && computerChoice === 0) {
+    console.log(computerWin);
+    return 0;
   } else if (humanChoice > computerChoice) {
     console.log(humanWin);
     return 1;
