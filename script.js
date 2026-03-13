@@ -3,7 +3,7 @@ function getRandomInt(max) {
 }
 
 function getHumanChoice() {
-  choice = prompt("Rock, Paper or Scissors?").toLowerCase();
+  const choice = prompt("Rock, Paper or Scissors?").toLowerCase();
 
   if (choice === "rock") {
     return 0;
@@ -52,3 +52,5 @@ function playRound(humanChoice, computerChoice) {
     return 0;
   }
 }
+
+console.log(playRound(getHumanChoice(), getComputerChoice()));
