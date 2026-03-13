@@ -52,3 +52,34 @@ function playRound(humanChoice, computerChoice) {
     return 0;
   }
 }
+
+function playGame() {
+  let humanScore = 0;
+  let computerScore = 0;
+  let roundCount = 0;
+
+  while (roundCount < 5) {
+    roundCount++;
+
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
+    const roundResult = playRound(humanSelection, computerSelection);
+    if (roundResult === 1) {
+      humanScore++;
+    } else if (roundResult === 0) {
+      computerScore++;
+    }
+  }
+
+  console.log(`You ${humanScore} : ${computerScore} Computer`);
+  if (humanScore > computerScore) {
+    console.log("You win!");
+  } else if (computerScore > humanScore) {
+    console.log("Computer wins!");
+  } else {
+    console.log("Draw!");
+  }
+}
+
+playGame();
