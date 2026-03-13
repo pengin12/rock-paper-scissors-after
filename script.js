@@ -13,3 +13,7 @@ function getHumanChoice() {
     return 2;
   }
 }
+
+function getComputerChoice() {
+  return getRandomInt(3);
+}
